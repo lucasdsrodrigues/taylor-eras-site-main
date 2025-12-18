@@ -1,0 +1,1322 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #2e2e2e;
+
+    background-color: #f5f1eb;
+    background-image: url("imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+}
+
+/* =========================
+   HERO / BANNER
+========================= */
+
+.hero {
+    position: relative;
+    padding: 140px 20px 160px;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top left, rgba(215,190,255,0.35), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(255,200,210,0.35), transparent 45%);
+}
+
+.logo {
+    width: 160px;
+    margin-bottom: 25px;
+}
+
+.hero-eyebrow {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6c5ce7;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #6c5ce7;
+    margin-bottom: 18px;
+}
+
+/* repetição das cores das eras */
+.hero h1::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #a8d8ff,
+        #f7c948,
+        #c77dff,
+        #e74c3c,
+        #ffb6c1,
+        #1e3799
+    );
+}
+
+.hero p {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #6b4a5f;
+}
+
+/* =========================
+   BARRA DAS ERAS
+========================= */
+
+.eras-strip {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(
+        90deg,
+        #a8d8ff,
+        #f7c948,
+        #c77dff,
+        #e74c3c,
+        #74b9ff,
+        #2d3436,
+        #ffb6c1,
+        #b8cbb8,
+        #7d8f69,
+        #1e3799,
+        #3d3d3d,
+        #c75b12
+    );
+}
+
+/* =========================
+   SEÇÃO DAS ERAS
+========================= */
+
+.eras-section {
+    padding: 90px 0 110px;
+}
+
+
+.eras-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 50px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
+    gap: 28px;
+    justify-content: center;
+    background: transparent;
+
+    /* FUNDO VISÍVEL */
+    background:
+        radial-gradient(circle at 20% 15%, rgba(168,216,255,0.35), transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(255,182,193,0.35), transparent 45%),
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.92),
+            rgba(250,246,255,0.96)
+        );
+
+    border-radius: 40px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.08),
+        inset 0 0 0 1px rgba(255,255,255,0.6);
+
+        background-image: url("imagens/eras.png");
+            background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+
+    background-position: center;
+}
+
+
+/* =========================
+   CARD BASE
+========================= */
+
+.era-card {
+    position: relative;
+    height: 190px;
+    padding: 22px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12),
+        0 0 0 1px rgba(255,255,255,0.35);
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.era-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.18),
+        0 0 0 2px rgba(255,255,255,0.45);
+}
+
+/* overlay escuro */
+.era-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.65)
+    );
+    z-index: 1;
+}
+
+/* aura colorida */
+.era-card::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    z-index: 0;
+    opacity: 0.6;
+    filter: blur(18px);
+}
+
+/* conteúdo */
+.era-card h3,
+.era-card p {
+    position: relative;
+    z-index: 2;
+}
+
+.era-card h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.era-card p {
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+/* =========================
+   AURAS POR ERA
+========================= */
+
+.era-debut::after      { background: #a8d8ff; }
+.era-fearless::after   { background: #f7c948; }
+.era-speaknow::after   { background: #c77dff; }
+.era-red::after        { background: #e74c3c; }
+.era-1989::after       { background: #74b9ff; }
+.era-reputation::after { background: #2d3436; }
+.era-lover::after      { background: #ffb6c1; }
+.era-folklore::after   { background: #b8cbb8; }
+.era-evermore::after   { background: #7d8f69; }
+.era-midnights::after  { background: #1e3799; }
+.era-ttpd::after       { background: #3d3d3d; }
+.era-showgirl::after   { background: #c75b12; }
+
+/* =========================
+   IMAGENS (AJUSTE O CAMINHO)
+========================= */
+
+.era-debut      { background: url("imagens/debut.jpg") center/cover no-repeat; }
+.era-fearless   { background: url("imagens/fearless.jpg") center/cover no-repeat; }
+.era-speaknow   { background: url("imagens/speaknow.jpg") center/cover no-repeat; }
+.era-red        { background: url("imagens/red.jpg") center/cover no-repeat; }
+.era-1989       { background: url("imagens/1989.jpg") center/cover no-repeat; }
+.era-reputation { background: url("imagens/reputation.jpg") center/cover no-repeat; }
+.era-lover      { background: url("imagens/lover.jpg") center/cover no-repeat; }
+.era-folklore   { background: url("imagens/folklore.jpg") center/cover no-repeat; }
+.era-evermore   { background: url("imagens/evermore.jpg") center/cover no-repeat; }
+.era-midnights  { background: url("imagens/midnights.jpg") center/cover no-repeat; }
+.era-ttpd       { background: url("imagens/ttpd.jpg") center/cover no-repeat; }
+.era-showgirl   { background: url("imagens/showgirl.jpg") center/cover no-repeat; }
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .eras-container {
+        padding: 0 25px;
+    }
+}
+.era-debut h3      { font-family: 'Cormorant Garamond', serif; }
+.era-fearless h3   { font-family: 'Great Vibes', cursive; }
+.era-speaknow h3   { font-family: 'Parisienne', cursive; }
+.era-red h3        { font-family: 'Playfair Display', serif; }
+.era-1989 h3       { font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
+.era-reputation h3 { font-family: 'UnifrakturCook', serif; }
+.era-lover h3      { font-family: 'Poiret One', cursive; }
+.era-folklore h3   { font-family: 'Merriweather', serif; }
+.era-evermore h3   { font-family: 'Special Elite', serif; }
+.era-midnights h3  { font-family: 'Inter', sans-serif; letter-spacing: 1px; }
+.era-ttpd h3       { font-family: 'Cormorant Garamond', serif; }
+.era-showgirl h3   { font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; }
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("images/noise.png");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 999;
+}
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("imagens/noise.png");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* =========================
+   NAVBAR / TOPBAR
+========================= */
+
+.topbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 10;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #6c5ce7;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #6b4a5f;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #6c5ce7;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-cta {
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #a8d8ff, #ffb6c1);
+    color: #2e2e2e;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    margin-top: 140px;
+    padding: 60px 0 50px;
+
+    /* mesmo fundo do body */
+    background-color: #f5f1eb;
+    background-image: url("imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 13px;
+    color: #6b4a5f;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #6c5ce7;
+}
+/* =========================
+   FOOTER ICONS
+========================= */
+
+.footer-icons {
+    display: flex;
+    gap: 22px;
+}
+
+.footer-icons a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(255,255,255,0.45);
+
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-icons a:hover {
+    transform: translateY(-3px);
+    background: rgba(108,92,231,0.15);
+}
+
+.footer-icons svg {
+    width: 18px;
+    height: 18px;
+    fill: #6c5ce7;
+}
+/* =========================
+   SEÇÃO POÉTICA / QUOTE
+========================= */
+
+/* =========================
+   SEÇÃO POÉTICA / QUOTE
+========================= */
+
+.quote-section {
+    position: relative;
+    padding: 120px 20px;
+    text-align: center;
+
+    /* papel vintage contínuo */
+    background-color: #f5f1eb;
+    background-image: url("imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+}
+
+/* linha colorida fina no topo */
+.quote-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #a8d8ff,
+        #f7c948,
+        #c77dff,
+        #ffb6c1,
+        #1e3799
+    );
+}
+
+/* =========================
+   QUOTE (GLASS)
+========================= */
+
+.quote-section blockquote {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    background: transparent;
+    box-shadow: none;
+
+    position: relative;
+    z-index: 1;
+
+    animation: floatQuote 7s ease-in-out infinite;
+}
+
+/* TEXTO */
+.quote-section blockquote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 1.35;
+    color: #4b3b55;
+    margin-bottom: 25px;
+}
+
+/* AUTOR */
+.quote-section blockquote span {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6c5ce7;
+}
+
+/* detalhe abaixo do quote */
+.quote-section blockquote::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    margin: 35px auto 0;
+    border-radius: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #a8d8ff,
+        #f7c948,
+        #c77dff,
+        #ffb6c1,
+        #1e3799
+    );
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .quote-section blockquote {
+        padding: 50px 30px;
+    }
+
+    .quote-section blockquote p {
+        font-size: 24px;
+    }
+}
+/* =========================
+   QUOTE FLUTUANTE
+========================= */
+
+@keyframes floatQuote {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.quote-section blockquote {
+    animation: floatQuote 7s ease-in-out infinite;
+}
+
+/* =========================
+   TIMELINE DAS ERAS
+   Editorial + Floating Cards
+========================= */
+
+.timeline-section {
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.timeline-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  
+    color: rgba(108, 92, 231, 0.6);
+  
+    margin-bottom: 48px;
+  
+    position: relative;
+  }
+  .timeline-title::after {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 2px;
+    margin: 16px auto 0;
+  
+    background: #6c5ce7;
+    border-radius: 2px;
+  
+    box-shadow:
+      0 0 8px rgba(108, 92, 231, 0.6),
+      0 0 16px rgba(108, 92, 231, 0.35);
+  }
+/* container da linha */
+.timeline {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* item */
+.timeline-item {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  
+    padding: 0.7rem 0.9rem;
+  
+    background-image: url("../assets/paper-vintage.png"); /* mesma textura */
+    background-size: 300px;
+    background-repeat: repeat;
+  
+    border-radius: 16px;
+  
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  
+    opacity: 0.85; /* 👈 quase invisível */
+    cursor: pointer;
+  
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+/* efeito hover suave */
+.timeline-item:hover {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+  .timeline-item.debut:hover {
+    filter: drop-shadow(0 10px 22px rgba(170, 140, 110, 0.45));
+  }
+  
+  .timeline-item.fearless:hover {
+    filter: drop-shadow(0 10px 22px rgba(212, 175, 55, 0.5));
+  }
+  
+  .timeline-item.speaknow:hover {
+    filter: drop-shadow(0 10px 22px rgba(160, 110, 190, 0.5));
+  }
+  
+  .timeline-item.red:hover {
+    filter: drop-shadow(0 10px 22px rgba(180, 40, 50, 0.5));
+  }
+  
+  .timeline-item.n1989:hover {
+    filter: drop-shadow(0 10px 22px rgba(80, 180, 220, 0.5));
+  }
+  
+  .timeline-item.reputation:hover {
+    filter: drop-shadow(0 10px 22px rgba(40, 40, 40, 0.6));
+  }
+  
+  .timeline-item.lover:hover {
+    filter: drop-shadow(0 10px 22px rgba(255, 150, 190, 0.55));
+  }
+  
+  .timeline-item.folklore:hover {
+    filter: drop-shadow(0 10px 22px rgba(140, 150, 140, 0.5));
+  }
+  
+  .timeline-item.evermore:hover {
+    filter: drop-shadow(0 10px 22px rgba(180, 130, 90, 0.5));
+  }
+  
+  .timeline-item.midnights:hover {
+    filter: drop-shadow(0 10px 22px rgba(90, 70, 160, 0.6));
+  }
+  
+  .timeline-item.ttpd:hover {
+    filter: drop-shadow(0 10px 22px rgba(120, 120, 120, 0.6));
+  }
+  
+  .timeline-item.showgirl:hover {
+    filter: drop-shadow(0 10px 22px rgba(206, 113, 7, 0.6));
+  }
+
+/* ano */
+.timeline-item span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #6b4a5f;
+}
+
+/* descrição */
+.timeline-item p {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #6b4a5f;
+    max-width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ponto da timeline */
+.timeline-item::before {
+    content: "";
+    display: block;
+    margin: 0 auto 14px;
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: currentColor;
+
+    box-shadow: 0 0 0 6px rgba(255,255,255,0.9);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.4);
+}
+
+/* =========================
+   CORES DAS ERAS (MANTIDAS)
+========================= */
+
+.debut { color: #a8d8ff; }
+.fearless { color: #f7c948; }
+.speaknow { color: #c77dff; }
+.red { color: #e74c3c; }
+.n1989 { color: #74b9ff; }
+.reputation { color: #2d3436; }
+.lover { color: #ffb6c1; }
+.folklore { color: #b8cbb8; }
+.evermore { color: #7d8f69; }
+.midnights { color: #1e3799; }
+.ttpd { color: #3d3d3d; }
+.showgirl { color: #e29608; }
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .timeline {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+}
+
+/* =========================
+   EFEITOS DE ENTRADA
+========================= */
+
+/* Página */
+body {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: pageEnter 1s ease-out forwards;
+}
+
+/* Hero */
+.hero {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroEnter 1.2s ease-out forwards;
+}
+
+/* Cards */
+.era-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardEnter 0.8s ease-out forwards;
+}
+
+@keyframes pageEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* delay em cascata */
+.era-card:nth-child(1) { animation-delay: 0.1s; }
+.era-card:nth-child(2) { animation-delay: 0.2s; }
+.era-card:nth-child(3) { animation-delay: 0.3s; }
+.era-card:nth-child(4) { animation-delay: 0.4s; }
+.era-card:nth-child(5) { animation-delay: 0.5s; }
+.era-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* =========================
+   MOBILE – TIMELINE
+========================= */
+
+@media (max-width: 768px) {
+
+    .timeline-section {
+        padding: 80px 20px;
+        text-align: left;
+    }
+
+    .timeline-title {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        position: relative;
+    }
+
+    /* remove qualquer linha antiga */
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 22px 1fr;
+        column-gap: 18px;
+        align-items: start;
+    }
+
+    /* bolinha */
+    .timeline-item::before {
+        margin: 6px 0 0;
+        width: 14px;
+        height: 14px;
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.9);
+    }
+
+    .timeline-item span {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .timeline-item p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   MOBILE – CARDS EM SWIPE
+========================= */
+
+@media (max-width: 768px) {
+
+    .eras-container {
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        padding: 30px 20px;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .era-card {
+        min-width: 85%;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+
+    .eras-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+========================= */
+
+.back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 24px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+    color: #6c5ce7;
+    font-size: 20px;
+    text-decoration: none;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+}
+@media (max-width: 768px) {
+    .quote-section blockquote {
+        animation: quoteFloat 8s ease-in-out infinite;
+    }
+}
+/* =========================
+   DARK MODE — MIDNIGHTS
+========================= */
+
+body.dark {
+    background-color: #0f1020;
+    background-image: url("imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+    color: #e6e6eb;
+    position: relative;
+}
+
+/* camada escura por cima da textura */
+body.dark::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(15,16,32,0.65);
+    pointer-events: none;
+    z-index: -1;
+
+}
+/* HERO */
+body.dark .hero h1 {
+    color: #b39cff;
+}
+
+body.dark .hero p {
+    color: #cfcbe9;
+}
+
+/* NAV */
+body.dark .nav-logo {
+    color: #b39cff;
+}
+
+body.dark .nav-links a {
+    color: #cfcbe9;
+}
+
+body.dark .nav-links a::after {
+    background: #b39cff;
+}
+
+/* ERAS CONTAINER */
+body.dark .eras-container {
+    background-image: url("imagens/eras.png");
+    background-color: transparent;
+}
+body.dark .eras-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(20,22,45,0.55);
+    border-radius: inherit;
+    pointer-events: none;
+}
+.eras-container {
+    position: relative;
+}
+
+.eras-container > * {
+    position: relative;
+    z-index: 1;
+}
+/* CARDS */
+body.dark .era-card {
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.45),
+        0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* QUOTE */
+body.dark .quote-section {
+    background-color: #0f1128;
+
+    /* mantém a textura */
+    background-image:
+        linear-gradient(
+            rgba(15, 17, 40, 0.65),
+            rgba(15, 17, 40, 0.65)
+        ),
+        url("imagens/paper-vintage.png");
+
+    background-repeat: repeat;
+    background-size: 420px;
+}
+
+body.dark .quote-section blockquote p {
+    color: #e6e1ff;
+}
+
+body.dark .quote-section blockquote p {
+    color: #e6e1ff;
+}
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes floatQuote {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+    .quote-section blockquote {
+        padding: 45px 30px;
+    }
+
+    .quote-section blockquote p {
+        font-size: 24px;
+    }
+}
+
+/* TIMELINE */
+body.dark .timeline-title {
+    color: #b39cff;
+}
+
+body.dark .timeline-item span,
+body.dark .timeline-item p {
+    color: #cfcbe9;
+}
+body.dark .timeline-item {
+    background: rgba(70, 60, 95, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+/* FOOTER */
+body.dark .footer {
+    background-color: transparent;
+    background-image: url("imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+    position: relative;
+}
+body.dark .footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(15,16,32,0.65);
+    pointer-events: none;
+}
+.footer-content {
+    position: relative;
+    z-index: 1;
+}
+body.dark .footer p {
+    color: #cfcbe9;
+}
+/* =========================
+   DARK MODE TOGGLE
+========================= */
+
+.dark-toggle {
+    background: rgba(255,255,255,0.6);
+    border: none;
+    border-radius: 999px;
+    padding: 8px 14px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+.dark-toggle:hover {
+    transform: translateY(-2px);
+}
+
+body.dark .dark-toggle {
+    background: rgba(40,42,80,0.6);
+    color: #fff;
+}
+body.dark .timeline-item {
+    background: none !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none;
+  
+    opacity: 1;
+  }
+  body.dark .timeline-item:hover {
+    opacity: 1;
+  }
+  /* =========================
+   GLOW DAS ERAS (FORTE)
+========================= */
+
+.timeline-item.debut:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(168, 216, 255, 0.7))
+      drop-shadow(0 8px 20px rgba(168, 216, 255, 0.55))
+      drop-shadow(0 16px 36px rgba(168, 216, 255, 0.45));
+  }
+  
+  .timeline-item.fearless:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(247, 201, 72, 0.75))
+      drop-shadow(0 8px 20px rgba(247, 201, 72, 0.6))
+      drop-shadow(0 16px 36px rgba(247, 201, 72, 0.5));
+  }
+  
+  .timeline-item.speaknow:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(199, 125, 255, 0.75))
+      drop-shadow(0 8px 20px rgba(199, 125, 255, 0.6))
+      drop-shadow(0 16px 36px rgba(199, 125, 255, 0.5));
+  }
+  
+  .timeline-item.red:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(231, 76, 60, 0.75))
+      drop-shadow(0 8px 20px rgba(231, 76, 60, 0.6))
+      drop-shadow(0 16px 36px rgba(231, 76, 60, 0.5));
+  }
+  
+  .timeline-item.n1989:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(116, 185, 255, 0.75))
+      drop-shadow(0 8px 20px rgba(116, 185, 255, 0.6))
+      drop-shadow(0 16px 36px rgba(116, 185, 255, 0.5));
+  }
+  
+  .timeline-item.reputation:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(45, 52, 54, 0.9))
+      drop-shadow(0 8px 20px rgba(45, 52, 54, 0.75))
+      drop-shadow(0 16px 36px rgba(45, 52, 54, 0.65));
+  }
+  
+  .timeline-item.lover:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(255, 182, 193, 0.8))
+      drop-shadow(0 8px 20px rgba(255, 182, 193, 0.65))
+      drop-shadow(0 16px 36px rgba(255, 182, 193, 0.55));
+  }
+  
+  .timeline-item.folklore:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(184, 203, 184, 0.75))
+      drop-shadow(0 8px 20px rgba(184, 203, 184, 0.6))
+      drop-shadow(0 16px 36px rgba(184, 203, 184, 0.5));
+  }
+  
+  .timeline-item.evermore:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(125, 143, 105, 0.75))
+      drop-shadow(0 8px 20px rgba(125, 143, 105, 0.6))
+      drop-shadow(0 16px 36px rgba(125, 143, 105, 0.5));
+  }
+  
+  .timeline-item.midnights:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(30, 55, 153, 0.8))
+      drop-shadow(0 8px 20px rgba(30, 55, 153, 0.65))
+      drop-shadow(0 16px 36px rgba(30, 55, 153, 0.55));
+  }
+  
+  .timeline-item.ttpd:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(120, 120, 120, 0.8))
+      drop-shadow(0 8px 20px rgba(120, 120, 120, 0.65))
+      drop-shadow(0 16px 36px rgba(120, 120, 120, 0.55));
+  }
+  
+  .timeline-item.showgirl:hover {
+    filter:
+      drop-shadow(0 0 6px rgba(226, 150, 8, 0.8))
+      drop-shadow(0 8px 20px rgba(226, 150, 8, 0.65))
+      drop-shadow(0 16px 36px rgba(226, 150, 8, 0.55));
+  }
+  body.dark .timeline-title::after {
+    filter: brightness(1.2);
+  }
+  .easter-text {
+    position: absolute;
+    bottom: -18px;
+  
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  
+    opacity: 0;
+    pointer-events: none;
+  
+    transition: opacity 0.4s ease 0.6s;
+  }
+  
+  .timeline-item:hover .easter-text {
+    opacity: 0.6;
+  }
+  .footer-easter-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* texto normal */
+  .footer-default {
+    transition: opacity 0.6s ease;
+  }
+  
+  /* easter egg */
+  .footer-easter {
+    position: absolute;
+    inset: 0;
+  
+    opacity: 0;
+    pointer-events: none;
+  
+    transition: opacity 0.6s ease 0.8s;
+  }
+  
+  /* hover */
+  .footer-easter-wrap:hover .footer-default {
+    opacity: 0;
+  }
+  
+  .footer-easter-wrap:hover .footer-easter {
+    opacity: 0.6;
+  }
+  body.dark .footer-easter {
+    color: #cfcbe9;
+  }
+  .editorial-gap {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* texto invisível base */
+  .editorial-gap span::before {
+    content: "you're on your own, kid.";
+  
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  
+    opacity: 0;
+    transform: translateY(6px);
+  
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  /* hover revela */
+  .editorial-gap:hover span::before {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+  body.dark .editorial-gap span::before {
+    content: "you always have been.";
+    color: #cfcbe9;
+  }
