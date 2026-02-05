@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>As Eras da Taylor Swift</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/quote.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/eras.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/dark.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Inter:wght@300;500&family=Kalam:wght@300;400&family=Merriweather:wght@300;700&family=Montserrat:wght@300;700&family=Parisienne&family=Playfair+Display:wght@400;700&family=Poiret+One&family=Special+Elite&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="topbar">
+  <nav class="nav">
+    <a href="#" class="nav-logo">T.S</a>
+
+    <ul class="nav-links">
+      <li><a href="#eras">Eras</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+    </ul>
+
+    <a href="#contato" class="nav-cta">Contato</a>
+  </nav>
+
+  <button id="darkToggle" class="dark-toggle">🌙</button>
+</header>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="logo.png" alt="Taylor Swift Logo" class="logo">
+
+  <span class="hero-eyebrow">discografia</span>
+
+  <h1>As Eras da Taylor Swift</h1>
+
+  <p>
+    Um passeio pela evolução artística, estética e musical
+    da maior artista de sua geração.
+  </p>
+</header>
+
+<div class="eras-strip"></div>
+<div class="era-transition"></div>
+
+<!-- QUOTE -->
+<section class="quote-section">
+  <blockquote>
+    <p>
+      “Each era tells a story.<br>
+      Together, they tell a lifetime.”
+    </p>
+    <span>— Taylor Swift</span>
+  </blockquote>
+</section>
+
+<div class="editorial-gap">
+  <span></span>
+</div>
+
+<!-- CARROSSEL DAS ERAS -->
+<section class="eras-carousel" id="eras">
+
+  <div class="carousel-track">
+
+    <div class="carousel-slide era-debut">
+      <div class="era-content">
+        <h3>Taylor Swift</h3>
+        <p>"A mess of a dreamer, with the nerve to adore you"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-fearless">
+      <div class="era-content">
+        <h3>Fearless</h3>
+        <p>"All the pages are just slipping through my hands and I'm so scared of how this ends"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-speak-now">
+      <div class="era-content">
+        <h3>Speak Now</h3>
+        <p>"Long live all the magic we made"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-red">
+      <div class="era-content">
+        <h3>Red</h3>
+        <p>"Love is a ruthless game unless you play it good and right"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-1989">
+      <div class="era-content">
+        <h3>1989</h3>
+        <p>"The rumors are terrible and cruel, but, honey, most of them are true"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-reputation">
+      <div class="era-content">
+        <h3>Reputation</h3>
+        <p>"Please don't ever become a stranger whose laugh I would recognize anywhere"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-lover">
+      <div class="era-content">
+        <h3>Lover</h3>
+        <p>"You gotta step into the daylight and let it go"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-folklore">
+      <div class="era-content">
+        <h3>Folklore</h3>
+        <p>"Living for the hope of it all"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-evermore">
+      <div class="era-content">
+        <h3>Evermore</h3>
+        <p>"One for the money, two for the show"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-midnights">
+      <div class="era-content">
+        <h3>Midnights</h3>
+        <p>"I'll stare directly at the sun, but never in the mirror"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-tortured-poets-department">
+      <div class="era-content">
+        <h3>The Tortured Poets Department</h3>
+        <p>"Please, i've been on my knees, change the prophecy"</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide era-the-life-of-a-showgirl">
+      <div class="era-content">
+        <h3>The Life of a Showgirl</h3>
+        <p>"This empire belongs to me"</p>
+      </div>
+    </div>
+
+  </div>
+
+<div class="carousel-controls">
+  <button class="prev" aria-label="Anterior">‹</button>
+  <button class="next" aria-label="Próximo">›</button>
+</div>
+
+  <div class="carousel-indicators">
+    <button class="active"></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+  </div>
+
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <h2 class="timeline-title">Uma jornada pelas eras</h2>
+
+  <div class="timeline">
+    <div class="timeline-item debut"><span>2006</span><p>Debut</p></div>
+    <div class="timeline-item fearless"><span>2008</span><p>Fearless</p></div>
+    <div class="timeline-item speaknow">
+      <span>2010</span>
+      <p>Speak Now</p>
+      <span class="easter-text">long live the walls we crashed through</span>
+    </div>
+    <div class="timeline-item red"><span>2012</span><p>Red</p></div>
+    <div class="timeline-item n1989"><span>2014</span><p>1989</p></div>
+    <div class="timeline-item reputation"><span>2017</span><p>Reputation</p></div>
+    <div class="timeline-item lover"><span>2019</span><p>Lover</p></div>
+    <div class="timeline-item folklore"><span>2020</span><p>Folklore</p></div>
+    <div class="timeline-item evermore"><span>2020</span><p>Evermore</p></div>
+    <div class="timeline-item midnights"><span>2022</span><p>Midnights</p></div>
+    <div class="timeline-item ttpd"><span>2024</span><p>TTPD</p></div>
+    <div class="timeline-item showgirl"><span>2025</span><p>TLOAS</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+
+    <span class="footer-easter-wrap">
+      <span class="footer-default">
+        © 2025 • Projeto visual inspirado na discografia de Taylor Swift
+      </span>
+      <span class="footer-easter">
+        long story short, i survived
+      </span>
+    </span>
+
+    <div class="footer-icons">
+      <a href="#" data-era="lover" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"/></svg>
+      </a>
+
+      <a href="#" data-era="midnights" aria-label="Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.6 14.4a.9.9 0 01-1.2.3 8.2 8.2 0 00-6.4-.7.9.9 0 01-.4-1.7 10 10 0 017.7.9.9.9 0 01.3 1.2z"/></svg>
+      </a>
+
+      <a href="#" data-era="reputation" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-3 .6-3.6-1.4-3.6-1.4z"/></svg>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/darkmode.js"></script>
+<script src="js/carousel.js"></script>
+
+</body>
+</html>

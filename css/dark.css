@@ -1,0 +1,122 @@
+body.dark {
+    background-image: url("../imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+    color: #e6e6eb;
+    position: relative;
+}
+
+body.dark::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(15,16,32,0.65);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body.dark .hero h1 { 
+    color: #b39cff; 
+}
+
+body.dark .hero p { 
+    color: #cfcbe9; 
+}
+
+body.dark .nav-logo { 
+    color: #b39cff; 
+}
+
+body.dark .nav-links a { 
+    color: #cfcbe9; 
+}
+
+body.dark .nav-links a::after { 
+    background: #b39cff; 
+}
+
+body.dark .quote-section {
+    position: relative;
+    background-image:
+        linear-gradient(rgba(15,17,40,0.65), rgba(15,17,40,0.65)),
+        url("../imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+}
+
+body.dark .quote-section p { 
+    color: #e6e1ff; 
+}
+
+body.dark .timeline-section {
+    position: relative;
+}
+
+body.dark .timeline-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            rgba(15,16,32,0.65),
+            rgba(15,16,32,0.65)
+        ),
+        url("../imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body.dark .timeline {
+    position: relative;
+    z-index: 1;
+}
+
+body.dark .timeline-title { 
+    color: #b39cff; 
+}
+
+body.dark .timeline-item {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body.dark .timeline-item span,
+body.dark .timeline-item p { 
+    color: #cfcbe9; 
+}
+
+body.dark .footer {
+    position: relative;
+    background-color: transparent;
+}
+
+body.dark .footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(15,16,32,0.65);
+    pointer-events: none;
+}
+
+body.dark .footer p,
+body.dark .footer-easter {
+    color: #cfcbe9;
+}
+
+body.dark .editorial-gap span::before {
+    content: "you always have been.";
+    color: #cfcbe9;
+}
+
+body.dark .timeline-item::after {
+    opacity: 0;
+    filter: blur(32px);
+}
+
+body.dark .timeline-item:hover::after {
+    opacity: 0.75;
+    filter: blur(44px);
+}

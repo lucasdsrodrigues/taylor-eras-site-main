@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #2e2e2e;
+
+    background-color: #f5f1eb;
+    background-image: url("../imagens/paper-vintage.png");
+    background-repeat: repeat;
+    background-size: 420px;
+
+    opacity: 0;
+    transform: translateY(12px);
+    animation: pageEnter 1s ease-out forwards;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../imagens/noise.png");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes pageEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
